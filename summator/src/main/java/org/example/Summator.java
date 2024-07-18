@@ -1,5 +1,7 @@
-package org.example.summator;
+package org.example;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -7,7 +9,9 @@ public class Summator {
     public static void main(String[] args) {
         AtomicInteger totalAmount = new AtomicInteger(0);
 
-        Scanner scanner = new Scanner(System.in);
+        String initialString = args[0];
+        InputStream targetStream = new ByteArrayInputStream(initialString.getBytes());
+        Scanner scanner = new Scanner(targetStream);
         String line = scanner.nextLine();
         scanner = new Scanner(line);
 

@@ -1,4 +1,4 @@
-package org.example.summator;
+package org.example;
 
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
